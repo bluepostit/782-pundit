@@ -7,8 +7,8 @@
 
 <p>
   <strong>User:</strong>
-  <%= @restaurant.user_id %>
+  <%= @restaurant.user.email %>
 </p>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) if policy(@restaurant).edit? %> |
 <%= link_to 'Back', restaurants_path %>
